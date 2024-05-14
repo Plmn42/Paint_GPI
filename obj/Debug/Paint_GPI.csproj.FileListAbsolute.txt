@@ -1,0 +1,10 @@
+D:\VS\Paint_GPI\Paint_GPI\bin\Debug\Paint_GPI.exe.config
+D:\VS\Paint_GPI\Paint_GPI\bin\Debug\Paint_GPI.exe
+D:\VS\Paint_GPI\Paint_GPI\bin\Debug\Paint_GPI.pdb
+D:\VS\Paint_GPI\Paint_GPI\obj\Debug\Paint_GPI.csproj.AssemblyReference.cache
+D:\VS\Paint_GPI\Paint_GPI\obj\Debug\Paint_GPI.Form1.resources
+D:\VS\Paint_GPI\Paint_GPI\obj\Debug\Paint_GPI.Properties.Resources.resources
+D:\VS\Paint_GPI\Paint_GPI\obj\Debug\Paint_GPI.csproj.GenerateResource.cache
+D:\VS\Paint_GPI\Paint_GPI\obj\Debug\Paint_GPI.csproj.CoreCompileInputs.cache
+D:\VS\Paint_GPI\Paint_GPI\obj\Debug\Paint_GPI.exe
+D:\VS\Paint_GPI\Paint_GPI\obj\Debug\Paint_GPI.pdb
