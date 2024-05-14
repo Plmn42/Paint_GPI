@@ -161,7 +161,7 @@ namespace Paint_GPI
         private void btnColor_Click(object sender, EventArgs e)
         {
             cd.ShowDialog();
-            
+            new_color = cd.Color;
         }
 
         private void importToolStripMenuItem_Click(object sender, EventArgs e)
