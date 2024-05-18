@@ -55,6 +55,7 @@
             this.btnCircle = new System.Windows.Forms.Button();
             this.btnColor = new System.Windows.Forms.Button();
             this.btnLine = new System.Windows.Forms.Button();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.gradientPanelTop.SuspendLayout();
@@ -65,9 +66,9 @@
             // 
             this.picCanvas.Cursor = System.Windows.Forms.Cursors.Cross;
             this.picCanvas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picCanvas.Location = new System.Drawing.Point(0, 172);
+            this.picCanvas.Location = new System.Drawing.Point(0, 175);
             this.picCanvas.Name = "picCanvas";
-            this.picCanvas.Size = new System.Drawing.Size(1417, 617);
+            this.picCanvas.Size = new System.Drawing.Size(1417, 614);
             this.picCanvas.TabIndex = 7;
             this.picCanvas.TabStop = false;
             this.picCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.picCanvas_Paint);
@@ -84,7 +85,7 @@
             this.editToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1417, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1417, 36);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -94,20 +95,20 @@
             this.importToolStripMenuItem,
             this.importToolStripMenuItem1});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 32);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // importToolStripMenuItem
             // 
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(169, 34);
             this.importToolStripMenuItem.Text = "Save";
             this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
             // 
             // importToolStripMenuItem1
             // 
             this.importToolStripMenuItem1.Name = "importToolStripMenuItem1";
-            this.importToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
+            this.importToolStripMenuItem1.Size = new System.Drawing.Size(169, 34);
             this.importToolStripMenuItem1.Text = "Import";
             // 
             // editToolStripMenuItem
@@ -121,50 +122,50 @@
             this.toolStripSeparator3,
             this.pasteToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 29);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 32);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // undoToolStripMenuItem
             // 
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + Z";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.undoToolStripMenuItem.Text = "Undo";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(226, 6);
             // 
             // cutToolStripMenuItem
             // 
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + x";
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.cutToolStripMenuItem.Text = "Cut";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(226, 6);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + C";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.copyToolStripMenuItem.Text = "Copy";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(267, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(226, 6);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + V";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
             this.pasteToolStripMenuItem.Text = "Paste";
             // 
             // gradientPanel1
@@ -195,7 +196,7 @@
             this.gradientPanelTop.Controls.Add(this.btnColor);
             this.gradientPanelTop.Controls.Add(this.btnLine);
             this.gradientPanelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gradientPanelTop.Location = new System.Drawing.Point(0, 33);
+            this.gradientPanelTop.Location = new System.Drawing.Point(0, 36);
             this.gradientPanelTop.Name = "gradientPanelTop";
             this.gradientPanelTop.Size = new System.Drawing.Size(1417, 139);
             this.gradientPanelTop.TabIndex = 5;
@@ -232,6 +233,7 @@
             this.picColors.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picColors.TabIndex = 0;
             this.picColors.TabStop = false;
+            this.picColors.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picColors_MouseClick);
             // 
             // btnTriangle
             // 
@@ -445,6 +447,7 @@
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnPickColor;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 

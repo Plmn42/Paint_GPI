@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -128,6 +129,7 @@ namespace Paint_GPI
             index = 5;
         }
 
+
         private void btnTriangle_Click(object sender, EventArgs e)
         {
             index = 6;
@@ -187,6 +189,20 @@ namespace Paint_GPI
             draw.Color=cd.Color;
         }
 
+        static Point set_point(PictureBox pb, Point pt)
+        {
+            float pX = 1f * pb.Height / pb.Width;
+            float pY = 1f * pb.Height / pb.Height;
+            return new Point((int)(pt.X * pX), (int)(pt.Y * pY));
+        }
+
+        private void picColors_MouseClick(object sender, MouseEventArgs e)
+        {
+            Point point = set_point(picColors, e.Location);
+            btnPickColor.BackColor = ((Bitmap)picColors.Image).GetPixel(point.X, point.Y);
+            new_color = btnPickColor.BackColor;
+            draw.Color = btnPickColor.BackColor;
+        }
         private void importToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
