@@ -44,6 +44,7 @@
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gradientPanel1 = new Paint_GPI.GradientPanel();
             this.gradientPanelTop = new Paint_GPI.GradientPanel();
+            this.btnPickColor = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
             this.picColors = new System.Windows.Forms.PictureBox();
             this.btnTriangle = new System.Windows.Forms.Button();
@@ -54,7 +55,6 @@
             this.btnCircle = new System.Windows.Forms.Button();
             this.btnColor = new System.Windows.Forms.Button();
             this.btnLine = new System.Windows.Forms.Button();
-            this.btnPickColor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.gradientPanelTop.SuspendLayout();
@@ -63,10 +63,11 @@
             // 
             // picCanvas
             // 
+            this.picCanvas.Cursor = System.Windows.Forms.Cursors.Cross;
             this.picCanvas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picCanvas.Location = new System.Drawing.Point(0, 175);
+            this.picCanvas.Location = new System.Drawing.Point(0, 172);
             this.picCanvas.Name = "picCanvas";
-            this.picCanvas.Size = new System.Drawing.Size(1417, 614);
+            this.picCanvas.Size = new System.Drawing.Size(1417, 617);
             this.picCanvas.TabIndex = 7;
             this.picCanvas.TabStop = false;
             this.picCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.picCanvas_Paint);
@@ -83,7 +84,7 @@
             this.editToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1417, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1417, 33);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -93,20 +94,20 @@
             this.importToolStripMenuItem,
             this.importToolStripMenuItem1});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 32);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 29);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // importToolStripMenuItem
             // 
             this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(169, 34);
+            this.importToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.importToolStripMenuItem.Text = "Save";
             this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
             // 
             // importToolStripMenuItem1
             // 
             this.importToolStripMenuItem1.Name = "importToolStripMenuItem1";
-            this.importToolStripMenuItem1.Size = new System.Drawing.Size(169, 34);
+            this.importToolStripMenuItem1.Size = new System.Drawing.Size(270, 34);
             this.importToolStripMenuItem1.Text = "Import";
             // 
             // editToolStripMenuItem
@@ -120,50 +121,50 @@
             this.toolStripSeparator3,
             this.pasteToolStripMenuItem});
             this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 32);
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 29);
             this.editToolStripMenuItem.Text = "Edit";
             // 
             // undoToolStripMenuItem
             // 
             this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
             this.undoToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + Z";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
+            this.undoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.undoToolStripMenuItem.Text = "Undo";
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(226, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(267, 6);
             // 
             // cutToolStripMenuItem
             // 
             this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
             this.cutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + x";
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
+            this.cutToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.cutToolStripMenuItem.Text = "Cut";
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(226, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(267, 6);
             // 
             // copyToolStripMenuItem
             // 
             this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
             this.copyToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + C";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
+            this.copyToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.copyToolStripMenuItem.Text = "Copy";
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(226, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(267, 6);
             // 
             // pasteToolStripMenuItem
             // 
             this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
             this.pasteToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + V";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
+            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.pasteToolStripMenuItem.Text = "Paste";
             // 
             // gradientPanel1
@@ -194,11 +195,20 @@
             this.gradientPanelTop.Controls.Add(this.btnColor);
             this.gradientPanelTop.Controls.Add(this.btnLine);
             this.gradientPanelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gradientPanelTop.Location = new System.Drawing.Point(0, 36);
+            this.gradientPanelTop.Location = new System.Drawing.Point(0, 33);
             this.gradientPanelTop.Name = "gradientPanelTop";
             this.gradientPanelTop.Size = new System.Drawing.Size(1417, 139);
             this.gradientPanelTop.TabIndex = 5;
             this.gradientPanelTop.TopColor = System.Drawing.Color.MidnightBlue;
+            // 
+            // btnPickColor
+            // 
+            this.btnPickColor.BackColor = System.Drawing.Color.White;
+            this.btnPickColor.Location = new System.Drawing.Point(411, 34);
+            this.btnPickColor.Name = "btnPickColor";
+            this.btnPickColor.Size = new System.Drawing.Size(74, 73);
+            this.btnPickColor.TabIndex = 9;
+            this.btnPickColor.UseVisualStyleBackColor = false;
             // 
             // btnClear
             // 
@@ -226,6 +236,7 @@
             // btnTriangle
             // 
             this.btnTriangle.BackColor = System.Drawing.Color.White;
+            this.btnTriangle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTriangle.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnTriangle.FlatAppearance.BorderSize = 0;
             this.btnTriangle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
@@ -244,6 +255,7 @@
             // btnRectangle
             // 
             this.btnRectangle.BackColor = System.Drawing.Color.White;
+            this.btnRectangle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRectangle.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnRectangle.FlatAppearance.BorderSize = 0;
             this.btnRectangle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
@@ -262,6 +274,7 @@
             // btnEraser
             // 
             this.btnEraser.BackColor = System.Drawing.Color.Transparent;
+            this.btnEraser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEraser.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnEraser.FlatAppearance.BorderSize = 0;
             this.btnEraser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -282,6 +295,7 @@
             // btnPencil
             // 
             this.btnPencil.BackColor = System.Drawing.Color.Transparent;
+            this.btnPencil.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPencil.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnPencil.FlatAppearance.BorderSize = 0;
             this.btnPencil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -302,6 +316,7 @@
             // btnFill
             // 
             this.btnFill.BackColor = System.Drawing.Color.Transparent;
+            this.btnFill.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFill.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnFill.FlatAppearance.BorderSize = 0;
             this.btnFill.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -321,6 +336,7 @@
             // btnCircle
             // 
             this.btnCircle.BackColor = System.Drawing.Color.White;
+            this.btnCircle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCircle.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnCircle.FlatAppearance.BorderSize = 0;
             this.btnCircle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
@@ -339,6 +355,7 @@
             // btnColor
             // 
             this.btnColor.BackColor = System.Drawing.Color.Transparent;
+            this.btnColor.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnColor.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnColor.FlatAppearance.BorderSize = 0;
             this.btnColor.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Teal;
@@ -359,6 +376,7 @@
             // btnLine
             // 
             this.btnLine.BackColor = System.Drawing.Color.White;
+            this.btnLine.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnLine.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btnLine.FlatAppearance.BorderSize = 0;
             this.btnLine.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightSkyBlue;
@@ -373,15 +391,6 @@
             this.btnLine.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.btnLine.UseVisualStyleBackColor = false;
             this.btnLine.Click += new System.EventHandler(this.btnLine_Click);
-            // 
-            // btnPickColor
-            // 
-            this.btnPickColor.BackColor = System.Drawing.Color.White;
-            this.btnPickColor.Location = new System.Drawing.Point(411, 34);
-            this.btnPickColor.Name = "btnPickColor";
-            this.btnPickColor.Size = new System.Drawing.Size(74, 73);
-            this.btnPickColor.TabIndex = 9;
-            this.btnPickColor.UseVisualStyleBackColor = false;
             // 
             // Form1
             // 

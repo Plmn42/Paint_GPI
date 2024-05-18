@@ -36,6 +36,10 @@ namespace Paint_GPI
 
         ColorDialog cd = new ColorDialog();
         Color new_color;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
 
         private void picCanvas_MouseDown(object sender, MouseEventArgs e)
         {
@@ -92,6 +96,11 @@ namespace Paint_GPI
             {
                 g.DrawLine(draw,cX,cY,x,y);
             }
+
+            if (index == 6)
+            {
+                DrawTriangle(g, cX, cY, x, y);
+            }
         }
 
         private void btnPencil_Click(object sender, EventArgs e)
@@ -123,10 +132,17 @@ namespace Paint_GPI
         {
             index = 6;
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
 
+        private void DrawTriangle(Graphics g, int startX, int startY, int endX, int endY)
+        {
+            Point[] points = new Point[3];
+            points[0] = new Point(startX + (endX - startX) / 2, startY);
+            points[1] = new Point(startX, endY);
+            points[2] = new Point(endX, endY);
+
+            g.DrawPolygon(draw, points);
         }
+     
 
         private void picCanvas_Paint(object sender, PaintEventArgs e)
         {
@@ -148,6 +164,11 @@ namespace Paint_GPI
                 {
                     g.DrawLine(draw, cX, cY, x, y);
                 }
+
+                if (index == 6)
+                {
+                    DrawTriangle(g, cX, cY, x, y);
+                }
             }    
         }
         private void btnClear_Click(object sender, EventArgs e)
@@ -162,6 +183,8 @@ namespace Paint_GPI
         {
             cd.ShowDialog();
             new_color = cd.Color;
+            picColors.BackColor = cd.Color;
+            draw.Color=cd.Color;
         }
 
         private void importToolStripMenuItem_Click(object sender, EventArgs e)
