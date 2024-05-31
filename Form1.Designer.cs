@@ -42,6 +42,7 @@
             this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.gradientPanel1 = new Paint_GPI.GradientPanel();
             this.gradientPanelTop = new Paint_GPI.GradientPanel();
             this.btnPickColor = new System.Windows.Forms.Button();
@@ -55,7 +56,6 @@
             this.btnCircle = new System.Windows.Forms.Button();
             this.btnColor = new System.Windows.Forms.Button();
             this.btnLine = new System.Windows.Forms.Button();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.gradientPanelTop.SuspendLayout();
@@ -66,9 +66,9 @@
             // 
             this.picCanvas.Cursor = System.Windows.Forms.Cursors.Cross;
             this.picCanvas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picCanvas.Location = new System.Drawing.Point(0, 175);
+            this.picCanvas.Location = new System.Drawing.Point(0, 172);
             this.picCanvas.Name = "picCanvas";
-            this.picCanvas.Size = new System.Drawing.Size(1417, 614);
+            this.picCanvas.Size = new System.Drawing.Size(1417, 617);
             this.picCanvas.TabIndex = 7;
             this.picCanvas.TabStop = false;
             this.picCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.picCanvas_Paint);
@@ -85,7 +85,7 @@
             this.editToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1417, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(1417, 33);
             this.menuStrip1.TabIndex = 8;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -196,7 +196,7 @@
             this.gradientPanelTop.Controls.Add(this.btnColor);
             this.gradientPanelTop.Controls.Add(this.btnLine);
             this.gradientPanelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gradientPanelTop.Location = new System.Drawing.Point(0, 36);
+            this.gradientPanelTop.Location = new System.Drawing.Point(0, 33);
             this.gradientPanelTop.Name = "gradientPanelTop";
             this.gradientPanelTop.Size = new System.Drawing.Size(1417, 139);
             this.gradientPanelTop.TabIndex = 5;
@@ -233,6 +233,7 @@
             this.picColors.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picColors.TabIndex = 0;
             this.picColors.TabStop = false;
+            this.picColors.Click += new System.EventHandler(this.picColors_Click);
             this.picColors.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picColors_MouseClick);
             // 
             // btnTriangle

@@ -144,7 +144,11 @@ namespace Paint_GPI
 
             g.DrawPolygon(draw, points);
         }
-     
+
+        private void picColors_Click(object sender, EventArgs e)
+        {
+
+        }
 
         private void picCanvas_Paint(object sender, PaintEventArgs e)
         {
