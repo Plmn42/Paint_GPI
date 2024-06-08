@@ -30,18 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.picCanvas = new System.Windows.Forms.PictureBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.importToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.cutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.copyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
-            this.pasteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.gradientPanel1 = new Paint_GPI.GradientPanel();
             this.gradientPanelTop = new Paint_GPI.GradientPanel();
@@ -57,7 +45,6 @@
             this.btnColor = new System.Windows.Forms.Button();
             this.btnLine = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).BeginInit();
-            this.menuStrip1.SuspendLayout();
             this.gradientPanelTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picColors)).BeginInit();
             this.SuspendLayout();
@@ -66,107 +53,15 @@
             // 
             this.picCanvas.Cursor = System.Windows.Forms.Cursors.Cross;
             this.picCanvas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.picCanvas.Location = new System.Drawing.Point(0, 172);
+            this.picCanvas.Location = new System.Drawing.Point(0, 139);
             this.picCanvas.Name = "picCanvas";
-            this.picCanvas.Size = new System.Drawing.Size(1417, 617);
+            this.picCanvas.Size = new System.Drawing.Size(1417, 650);
             this.picCanvas.TabIndex = 7;
             this.picCanvas.TabStop = false;
             this.picCanvas.Paint += new System.Windows.Forms.PaintEventHandler(this.picCanvas_Paint);
             this.picCanvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picCanvas_MouseDown);
             this.picCanvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picCanvas_MouseMove);
             this.picCanvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picCanvas_MouseUp);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fileToolStripMenuItem,
-            this.editToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1417, 33);
-            this.menuStrip1.TabIndex = 8;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // fileToolStripMenuItem
-            // 
-            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.importToolStripMenuItem,
-            this.importToolStripMenuItem1});
-            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(54, 32);
-            this.fileToolStripMenuItem.Text = "File";
-            // 
-            // importToolStripMenuItem
-            // 
-            this.importToolStripMenuItem.Name = "importToolStripMenuItem";
-            this.importToolStripMenuItem.Size = new System.Drawing.Size(169, 34);
-            this.importToolStripMenuItem.Text = "Save";
-            this.importToolStripMenuItem.Click += new System.EventHandler(this.importToolStripMenuItem_Click);
-            // 
-            // importToolStripMenuItem1
-            // 
-            this.importToolStripMenuItem1.Name = "importToolStripMenuItem1";
-            this.importToolStripMenuItem1.Size = new System.Drawing.Size(169, 34);
-            this.importToolStripMenuItem1.Text = "Import";
-            // 
-            // editToolStripMenuItem
-            // 
-            this.editToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.undoToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.cutToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.copyToolStripMenuItem,
-            this.toolStripSeparator3,
-            this.pasteToolStripMenuItem});
-            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
-            this.editToolStripMenuItem.Size = new System.Drawing.Size(58, 32);
-            this.editToolStripMenuItem.Text = "Edit";
-            // 
-            // undoToolStripMenuItem
-            // 
-            this.undoToolStripMenuItem.Name = "undoToolStripMenuItem";
-            this.undoToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + Z";
-            this.undoToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.undoToolStripMenuItem.Text = "Undo";
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(226, 6);
-            // 
-            // cutToolStripMenuItem
-            // 
-            this.cutToolStripMenuItem.Name = "cutToolStripMenuItem";
-            this.cutToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + x";
-            this.cutToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.cutToolStripMenuItem.Text = "Cut";
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(226, 6);
-            // 
-            // copyToolStripMenuItem
-            // 
-            this.copyToolStripMenuItem.Name = "copyToolStripMenuItem";
-            this.copyToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + C";
-            this.copyToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.copyToolStripMenuItem.Text = "Copy";
-            // 
-            // toolStripSeparator3
-            // 
-            this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(226, 6);
-            // 
-            // pasteToolStripMenuItem
-            // 
-            this.pasteToolStripMenuItem.Name = "pasteToolStripMenuItem";
-            this.pasteToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl + V";
-            this.pasteToolStripMenuItem.Size = new System.Drawing.Size(229, 34);
-            this.pasteToolStripMenuItem.Text = "Paste";
             // 
             // gradientPanel1
             // 
@@ -196,7 +91,7 @@
             this.gradientPanelTop.Controls.Add(this.btnColor);
             this.gradientPanelTop.Controls.Add(this.btnLine);
             this.gradientPanelTop.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gradientPanelTop.Location = new System.Drawing.Point(0, 33);
+            this.gradientPanelTop.Location = new System.Drawing.Point(0, 0);
             this.gradientPanelTop.Name = "gradientPanelTop";
             this.gradientPanelTop.Size = new System.Drawing.Size(1417, 139);
             this.gradientPanelTop.TabIndex = 5;
@@ -403,21 +298,16 @@
             this.Controls.Add(this.picCanvas);
             this.Controls.Add(this.gradientPanel1);
             this.Controls.Add(this.gradientPanelTop);
-            this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.picCanvas)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.gradientPanelTop.ResumeLayout(false);
             this.gradientPanelTop.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picColors)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -434,18 +324,6 @@
         private System.Windows.Forms.Button btnTriangle;
         private System.Windows.Forms.PictureBox picColors;
         private System.Windows.Forms.PictureBox picCanvas;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem undoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem cutToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem importToolStripMenuItem1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
-        private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnPickColor;
         private System.Windows.Forms.ColorDialog colorDialog1;
