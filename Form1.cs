@@ -75,25 +75,7 @@ namespace Paint_GPI
             this.Controls.Add(menuStrip);
         }
 
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {
-            if (keyData == (Keys.Control | Keys.C))
-            {
-                CopyMenuItem_Click(this, EventArgs.Empty);
-                return true;
-            }
-            if (keyData == (Keys.Control | Keys.X))
-            {
-                CutMenuItem_Click(this, EventArgs.Empty);
-                return true;
-            }
-            if (keyData == (Keys.Control | Keys.V))
-            {
-                PasteMenuItem_Click(this, EventArgs.Empty);
-                return true;
-            }
-            return base.ProcessCmdKey(ref msg, keyData);
-        }
+       
 
         private void SaveMenuItem_Click(object sender, EventArgs e)
         {
@@ -102,6 +84,7 @@ namespace Paint_GPI
             if (sfd.ShowDialog() == DialogResult.OK)
             {
                 bm.Save(sfd.FileName);
+                
             }
         }
 
@@ -317,11 +300,5 @@ namespace Paint_GPI
             new_color = pickedColor;
             draw.Color = pickedColor;
         }
-
-        private void importToolStripMenuItem_Click(object sender, EventArgs e) { }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) { }
-
-        private void importToolStripMenuItem1_Click(object sender, EventArgs e) { }
     }
 }
